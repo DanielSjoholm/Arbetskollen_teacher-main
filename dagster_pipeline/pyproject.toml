@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.dagster]
+module_name = "dagster_pipeline.definitions"  # Modulen där dina Dagster-definitions finns
+code_location_name = "dagster_pipeline"        # Platsens namn i Dagster
+
+[tool.dagster.workspace]
+python_file = "dagster_pipeline/source.py"  # Justera så att den pekar på din pipeline-modul
