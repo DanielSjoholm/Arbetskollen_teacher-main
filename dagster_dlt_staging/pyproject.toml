@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.dagster]
+# Namnet på modulen som innehåller dina Dagster-definitioner (pipelines, jobs, etc.)
+module_name = "dagster_dlt_staging.definitions"
+
+# Namnet på "code location" i Dagster som refererar till din kod
+code_location_name = "dagster_dlt_staging"
+
+# Konfigurera var du vill att Dagster ska ladda din workspace från
+[tool.dagster.workspace]
+python_file = "dagster_dlt_staging/repository.py"
+
+# Metadata om ditt projekt
+[tool.poetry]
+name = "dagster_dlt_staging"
+version = "0.1.0"
+description = "A Dagster project for running DLT jobs"
+authors = ["Ditt Namn <din.email@example.com>"]
